@@ -25,6 +25,7 @@ const itemVariants = {
 }
 
 export default function About() {
+  
   return (
     <div className="min-h-screen bg-[#FDF0F0]">
       <Navbar />
@@ -44,15 +45,20 @@ export default function About() {
           className="bg-white p-6 rounded-lg shadow-md"
         >
           <motion.p variants={itemVariants} className="text-gray-600 mb-4">
-            Hello! I'm [Your Name], a passionate developer with experience in [your skills/technologies].
-            I love creating innovative solutions and am always eager to learn new technologies.
+            Hello! I&apos;m Wen Xian, a penultimate university student studying Information Systems at Singapore Management University, 
+            specializing in Business Analytics and Artificial Intelligence. 
+            With a strong foundation in data analytics, software development, and geospatial analysis, I’m passionate about leveraging technology to solve real-world problems and optimize processes.
+            My experiences span product development, data visualization, and full-stack development, including creating data dashboards, implementing machine learning solutions, and developing web applications. I thrive in collaborative environments, continuously honing my skills while embracing challenges that push me to grow.
+      
           </motion.p>
           <motion.p variants={itemVariants} className="text-gray-600">
-            Feel free to check out my projects and get in touch if you'd like to collaborate!
+            Feel free to check out my projects and get in touch if you&apos;d like to collaborate!
           </motion.p>
         </motion.div>
       </main>
     </div>
   )
 }
+
+
 
