@@ -36,7 +36,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold mb-8 text-center text-[#132043]"
         >
-          About Me
+          Contact Me
         </motion.h1>
         <motion.div 
           variants={containerVariants}
