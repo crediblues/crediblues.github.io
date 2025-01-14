@@ -7,8 +7,8 @@ import type { NextConfig } from "next";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/crediblues.github.io',
-  // assetPrefix: '/crediblues.github.io',
+  basePath: '',
+  assetPrefix: '',
   images: {
     unoptimized: true,
   },
