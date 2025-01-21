@@ -3,7 +3,6 @@
 import Navbar from './components/Navbar';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import Link from 'next/link'
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -39,14 +38,6 @@ export default function Home() {
     }
   }
   
-  const letterVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1,
-      y: 0,
-      transition: { type: 'spring', damping: 12, stiffness: 200 }
-    }
-  }
 
   const headingText = "Hello, I am Wen Xian"
 
