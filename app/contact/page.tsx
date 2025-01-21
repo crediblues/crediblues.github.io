@@ -1,64 +1,65 @@
-'use client'
+"use client"
 
-import { motion } from 'framer-motion'
-import Navbar from '../components/Navbar'
+import { motion } from "framer-motion"
+import { Github, Linkedin, Mail } from "lucide-react"
+import Navbar from "../components/Navbar"
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3
-    }
-  }
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: {
-      duration: 0.5
-    }
-  }
-}
-
-export default function About() {
-  
+export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#FDF0F0]">
+    <div className="min-h-screen bg-[#f8f0f0]">
       <Navbar />
-      <main className="container mx-auto px-6 py-8">
-        <motion.h1 
+      <motion.main
+        className="container mx-auto px-6 py-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.h1
+          className="text-3xl font-semibold text-[#132043] text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl font-bold mb-8 text-center text-[#132043]"
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
           Contact Me
         </motion.h1>
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="bg-white p-6 rounded-lg shadow-md"
+        <motion.div
+          className="flex flex-wrap justify-center gap-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <motion.p variants={itemVariants} className="text-gray-600 mb-4">
-            Hello! I&apos;m Wen Xian, a penultimate university student studying Information Systems at Singapore Management University, 
-            specializing in Business Analytics and Artificial Intelligence. 
-            With a strong foundation in data analytics, software development, and geospatial analysis, I’m passionate about leveraging technology to solve real-world problems and optimize processes.
-            My experiences span product development, data visualization, and full-stack development, including creating data dashboards, implementing machine learning solutions, and developing web applications. I thrive in collaborative environments, continuously honing my skills while embracing challenges that push me to grow.
-      
-          </motion.p>
-          <motion.p variants={itemVariants} className="text-gray-600">
-            Feel free to check out my projects and get in touch if you&apos;d like to collaborate!
-          </motion.p>
+          <a
+            href="https://www.linkedin.com/in/wen-xian-ooi-584469233/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-2"
+          >
+            <div className="p-4 rounded-full border-2 border-[#132043] group-hover:bg-[#132043] transition-colors duration-300">
+              <Linkedin className="w-8 h-8 text-[#132043] group-hover:text-white" />
+            </div>
+            <span className="text-[#132043] font-medium">LinkedIn</span>
+          </a>
+
+          <a
+            href="https://github.com/crediblues"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-2"
+          >
+            <div className="p-4 rounded-full border-2 border-[#132043] group-hover:bg-[#132043] transition-colors duration-300">
+              <Github className="w-8 h-8 text-[#132043] group-hover:text-white" />
+            </div>
+            <span className="text-[#132043] font-medium">Github</span>
+          </a>
+
+          <a href="mailto:ooiwenxian@gmail.com" className="group flex flex-col items-center gap-2">
+            <div className="p-4 rounded-full border-2 border-[#132043] group-hover:bg-[#132043] transition-colors duration-300">
+              <Mail className="w-8 h-8 text-[#132043] group-hover:text-white" />
+            </div>
+            <span className="text-[#132043] font-medium">Email</span>
+          </a>
         </motion.div>
-      </main>
+      </motion.main>
     </div>
   )
 }
-
-
-

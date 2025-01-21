@@ -4,29 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar'
 import ProjectCard from '../components/Projectcard'
 
-const projects = [
-    {
-      id: "project1",
-      title: "Product Development and Analytics Intern",
-      description: "SP Group (SP Digital)",
-      techStack: [],
-      githubLink: "https://github.com/yourusername/project1"
-    },
-    {
-      id: "project2",
-      title: "Project 2",
-      description: "A brief description of Project 2",
-      techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-      githubLink: "https://github.com/yourusername/project2"
-    },
-    {
-      id: "project3",
-      title: "Project 3",
-      description: "A brief description of Project 3",
-      techStack: ["Vue.js", "Express", "PostgreSQL"],
-      githubLink: "https://github.com/yourusername/project3"
-    }
-  ]
+import projects from "../projects/Projectsdata";
   
   const containerVariants = {
     hidden: { opacity: 0 },

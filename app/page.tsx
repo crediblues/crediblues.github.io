@@ -3,6 +3,7 @@
 import Navbar from './components/Navbar';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Link from 'next/link'
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -30,26 +31,89 @@ export default function Home() {
     visible: { opacity: 1, y: 0 },
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  }
+  
+  const letterVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: { type: 'spring', damping: 12, stiffness: 200 }
+    }
+  }
+
+  const headingText = "Hello, I am Wen Xian"
+
   return (
-    <div className="min-h-screen bg-[#FFFFFF]">
+    <div className="min-h-screen bg-[#FDF0F0]">
       <Navbar />
       <div className="overflow-hidden">
         {/* First Section */}
         <motion.div
-          className="min-h-screen flex flex-col justify-center items-center bg-[#FFFFFF] text-center"
+          className="min-h-screen flex flex-col justify-center items-center bg-[#FDF0F0] text-center"
           initial="hidden"
           animate={scrollY < windowHeight ? 'visible' : 'hidden'}
           variants={variants}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-5xl font-bold text-[#132043]">Hello, I am Wen Xian.</h1>
-          <h3 className="text-2xl font-semibold text-[#132043]">
-            I am an aspiring data scientist studying in Singapore Management University
-          </h3>
+          transition={{ duration: 0.6 }}>
+          <motion.h1 
+            className="text-5xl font-bold text-[#132043] mb-4 mt-0 flex"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {/* {headingText.split('').map((char, index) => (
+              <motion.span key={index} variants={letterVariants}>
+                {char === ' ' ? '\u00A0' : char}
+              </motion.span>
+            ))} */}
+            {headingText}
+          </motion.h1>
+          <motion.p 
+            className="text-lg text-gray-700 max-w-3xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            I am a penultimate university student studying Information Systems at Singapore Management University, 
+            specializing in Business Analytics and Artificial Intelligence. 
+            
+          </motion.p>
+          {/* <h2 className="text-3xl font-semibold text-[#132043] mt-5">Explore</h2>
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mt-5">
+            <ExploreLink href="/skills">
+              my skills
+            </ExploreLink>
+            <ExploreLink href="/projects">
+              my projects
+            </ExploreLink>
+          </div> */}
         </motion.div>
+        {/* <motion.div 
+          className="flex flex-col items-center space-y-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+        >
+          <h2 className="text-3xl font-semibold text-[#132043]">explore</h2>
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+            <ExploreLink href="/skills">
+              my skills
+            </ExploreLink>
+            <ExploreLink href="/projects">
+              my projects
+            </ExploreLink>
+          </div>
+        </motion.div>
+ */}
 
         {/* Second Section */}
-        <motion.div
+        {/* <motion.div
           className="min-h-screen flex flex-col justify-center items-center bg-[#E0F7FA] text-center"
           initial="hidden"
           animate={
@@ -65,7 +129,7 @@ export default function Home() {
             <li>Geospatial Analytics</li>
             <li>Data Visualization</li>
           </ul>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

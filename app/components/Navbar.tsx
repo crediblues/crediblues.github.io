@@ -10,6 +10,9 @@ export default function Navbar() {
         <Link href="/projects" className="text-lg font-bold text-[#132043] hover:underline">
           Projects
         </Link>
+        <Link href="/about" className="text-lg font-bold text-[#132043] hover:underline">
+          About
+        </Link>
         <Link href="/contact" className="text-lg font-bold text-[#132043] hover:underline">
           Contact
         </Link>

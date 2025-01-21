@@ -2,14 +2,19 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 interface ProjectCardProps {
-  id: string
-  title: string
-  description: string
-  techStack: string[]
-  githubLink: string
+  id: string;
+  title: string;
+  description: string;
+  techStack: string[];
+  githubLink: string;
+  images: string[];
+  features: string[];
+  hideGitHubLink?: boolean
+  hideImages?: boolean
+  hideRole?: boolean
 }
 
-export default function ProjectCard({ id, title, description, techStack = [], githubLink }: ProjectCardProps) {
+export default function ProjectCard({ id, title, description, techStack = [], githubLink, hideGitHubLink}: ProjectCardProps) {
     return (
       <motion.div className="bg-white p-6 rounded-lg shadow-md">
         <Link href={`/project/${id}`} className="block mb-2">
@@ -28,9 +33,14 @@ export default function ProjectCard({ id, title, description, techStack = [], gi
           <Link href={`/project/${id}`} className="text-[#132043] hover:underline">
             View Details
           </Link>
-          <Link href={githubLink} target="_blank" rel="noopener noreferrer" className="text-[#132043] hover:underline">
-            View on GitHub
-          </Link>
+          {/* Render GitHub link only if it's not hidden */}
+          {!hideGitHubLink && githubLink ? (
+            <Link href={githubLink} target="_blank" rel="noopener noreferrer" className="text-[#132043] hover:underline">
+              View on GitHub
+            </Link>
+          ) : (
+            <span className="text-gray-400"></span> // Disabled text when link is hidden
+          )}
         </div>
       </motion.div>
     )

@@ -12,9 +12,11 @@ interface Project {
   techStack: string[]
   githubLink: string
   images: string[]
+  role: string[]
   features: string[]
-  challenges: string
-  futurePlans: string
+  hideGitHubLink: boolean
+  hideImages: boolean
+  hideRole: boolean
 }
 
 interface ProjectDetailProps {
@@ -61,11 +63,13 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           animate="visible"
           className="bg-white p-6 rounded-lg shadow-md"
         >
-          <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            {project.images.map((img, index) => (
-              <ProjectImage key={index} src={img} alt={`${project.title} screenshot ${index + 1}`} />
-            ))}
-          </motion.div>
+          {!project.hideImages && (
+            <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              {project.images.map((img, index) => (
+                <ProjectImage key={index} src={img} alt={`${project.title} screenshot ${index + 1}`} />
+              ))}
+            </motion.div>
+          )}
           <motion.div variants={itemVariants} className="mb-6">
             <h2 className="text-2xl font-bold mb-2 text-[#132043]">Description</h2>
             <p className="text-gray-600">{project.description}</p>
@@ -87,24 +91,25 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             </ul>
           </motion.div>
           <motion.div variants={itemVariants} className="mb-6">
-            <h2 className="text-2xl font-bold mb-2 text-[#132043]">Challenges</h2>
-            <p className="text-gray-600">{project.challenges}</p>
-          </motion.div>
-          <motion.div variants={itemVariants} className="mb-6">
-            <h2 className="text-2xl font-bold mb-2 text-[#132043]">Future Plans</h2>
-            <p className="text-gray-600">{project.futurePlans}</p>
+            <h2 className="text-2xl font-bold mb-2 text-[#132043]">Role</h2>
+            <ul className="list-disc list-inside">
+              {project.role.map((role, index) => (
+                <li key={index} className="text-gray-600">{role}</li>
+              ))}
+            </ul>
           </motion.div>
           <motion.div variants={itemVariants} className="flex justify-between items-center">
             <Link href="/projects" className="text-[#132043] hover:underline">
               Back to Projects
             </Link>
-            <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-[#132043] hover:underline">
-              View on GitHub
-            </Link>
+            {!project.hideGitHubLink && (
+              <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-[#132043] hover:underline">
+                View on GitHub
+              </Link>
+            )}
           </motion.div>
         </motion.div>
       </main>
     </div>
   )
 }
-
