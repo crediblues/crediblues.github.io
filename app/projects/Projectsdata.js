@@ -3,7 +3,7 @@
 const projects = [
     {
       id: "project1",
-      title: "Product Development and Analytics Intern @ SP Group (SP Digital)",
+      title: "Product Development Intern @ SP Group (SP Digital)",
       description: "Product Development, Product Management, Data Analytics and Visualisation",
       techStack: ["SQL", "BigQuery", "Google Looker Studio", "JIRA", "Confluence"],
       githubLink: "",
