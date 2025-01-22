@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#f8f0f0]">
+    <div className="min-h-screen bg-[#FDF0F0]">
       <Navbar />
       <motion.main
         className="container mx-auto px-6 py-8 max-w-4xl"
