@@ -1,7 +1,83 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import Navbar from '../components/Navbar'
+import { motion } from "framer-motion"
+import Navbar from "../components/Navbar"
+import {
+  Code,
+  Database,
+  FileSpreadsheet,
+  FlaskRoundIcon as Flask,
+  BarChart,
+  FileCode,
+  Cpu,
+  BrainCircuit,
+  Table,
+} from "lucide-react"
+
+interface SkillCategory {
+  name: string;
+  icon: React.ReactNode;
+  skills: string;
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    name: "Languages",
+    icon: <Code size={32} />,
+    skills: "Python, R, SQL, HTML, CSS, JavaScript",
+  },
+  {
+    name: "Frameworks",
+    icon: <Flask size={32} />,
+    skills: "Flask, Next.js, Vue.js, Bootstrap, TailwindCSS",
+  },
+  {
+    name: "Python Libraries",
+    icon: <FileCode size={32} />,
+    skills: "Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, Pytorch",
+  },
+  {
+    name: "SQL",
+    icon: <Database size={32} />,
+    skills:
+      "Create, Alter, Insert, Select, Update, Merge, Drop, Truncate, Delete, Joins, CTE, Temp Tables, Indexes, Windows Functions, Aggregate Functions, Views, Stored Procedures",
+  },
+  {
+    name: "R",
+    icon: <FileSpreadsheet size={32} />,
+    skills: "Tidyverse, Shiny",
+  },
+  {
+    name: "Excel",
+    icon: <Table size={32} />,
+    skills: "Pivot tables, formulas (V-Lookup and others), data validation, and conditional formatting",
+  },
+  {
+    name: "Databases",
+    icon: <Database size={32} />,
+    skills: "MySQL, BigQuery",
+  },
+  {
+    name: "BI Tools",
+    icon: <BarChart size={32} />,
+    skills: "Tableau, Power BI, Google Looker Studio",
+  },
+  {
+    name: "Data Modelling",
+    icon: <BrainCircuit size={32} />,
+    skills: "Lucid Chart",
+  },
+  {
+    name: "Documentation",
+    icon: <FileCode size={32} />,
+    skills: "Confluence, JIRA",
+  },
+  {
+    name: "Other",
+    icon: <Cpu size={32} />,
+    skills: "Product Management, Git, Docker",
+  },
+]
 
 export default function About() {
   return (
@@ -45,23 +121,12 @@ export default function About() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-[#132043] mb-4">Skills and Expertise</h2>
-          <ul className="list-disc list-inside space-y-2 text-[#132043]">
-            <li>Languages: Python, R, SQL, HTML, CSS, JavaScript</li>
-            <li>Frameworks: Flask, Next.js, Vue.js, Bootstrap, TailwindCSS</li>
-            <li>Python: Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, Pytorch</li>
-            <li>
-              SQL: Create, Alter, Insert, Select, Update, Merge, Drop, Truncate, Delete, Joins, CTE, Temp Tables,
-              Indexes, Windows Functions, Aggregate Functions, Views, Stored Procedures.
-            </li>
-            <li>R: Tidyverse, Shiny</li>
-            <li>Excel: Pivot tables, formulas (V-Lookup and others), data validation, and conditional formatting.</li>
-            <li>Databases: MySQL, BigQuery</li>
-            <li>BI Tools: Tableau, Power BI, Google Looker Studio</li>
-            <li>Data Modelling: Lucid Chart</li>
-            <li>Documentation Tools: Confluence, JIRA</li>
-            <li>Other: Product Management, Git, Docker</li>
-          </ul>
+          <h2 className="text-2xl font-semibold text-[#132043] mb-6">Skills and Expertise</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {skillCategories.map((category, index) => (
+              <SkillItem key={index} {...category} />
+            ))}
+          </div>
         </section>
 
         <section className="mb-12">
@@ -84,5 +149,19 @@ export default function About() {
         </section>
       </motion.main>
     </div>
+  )
+}
+
+function SkillItem({ name, icon, skills }: SkillCategory) {
+  return (
+    <motion.div
+      className="bg-white p-4 rounded-lg shadow-md aspect-square flex flex-col justify-center items-center text-center"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <div className="mb-2 text-[#132043]">{icon}</div>
+      <h3 className="text-lg font-semibold text-[#132043] mb-2">{name}</h3>
+      <p className="text-xs text-gray-600 overflow-hidden">{skills}</p>
+    </motion.div>
   )
 }

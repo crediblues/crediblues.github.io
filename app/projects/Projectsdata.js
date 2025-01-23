@@ -57,7 +57,8 @@ const projects = [
           "React",
           "TypeScript",
           "Tailwind CSS",
-          "Framer Motion"
+          "Framer Motion",
+          "Lucide React"
         ],
         githubLink: "https://github.com/crediblues/crediblues.github.io",
         images: ["image3.png"],
