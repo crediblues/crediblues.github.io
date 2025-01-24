@@ -90,14 +90,17 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               ))}
             </ul>
           </motion.div>
-          <motion.div variants={itemVariants} className="mb-6">
-            <h2 className="text-2xl font-bold mb-2 text-[#132043]">Role</h2>
-            <ul className="list-disc list-inside">
-              {project.role.map((role, index) => (
-                <li key={index} className="text-gray-600">{role}</li>
-              ))}
-            </ul>
-          </motion.div>
+          {!project.hideRole && (
+            <motion.div variants={itemVariants} className="mb-6">
+              <h2 className="text-2xl font-bold mb-2 text-[#132043]">Role</h2>
+              <ul className="list-disc list-inside">
+                {project.role.map((role, index) => (
+                  <li key={index} className="text-gray-600">{role}</li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+
           <motion.div variants={itemVariants} className="flex justify-between items-center">
             <Link href="/projects" className="text-[#132043] hover:underline">
               Back to Projects

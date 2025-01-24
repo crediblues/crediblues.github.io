@@ -4,11 +4,12 @@ const projects = [
     {
       id: "project1",
       title: "Product Development Intern @ SP Group (SP Digital)",
-      description: "Product Development, Product Management, Data Analytics and Visualisation",
-      techStack: ["SQL", "BigQuery", "Google Looker Studio", "JIRA", "Confluence"],
+      description: "I was attached to the product team working on the SP App, which is a platform designed to help customers monitor their utilities usage, pay bills conveniently, and adopt sustainable practices. It is widely used by Singapore residents.",
+      techStack: ["SQL", "BigQuery", "Google Looker Studio", "JIRA", "Confluence", "Figma", "Canva"],
       githubLink: "",
-      images: ["image1.png", "image2.png"],
+      images: ["/spgroup.png"],
       role: [
+        "Product Development, Product Management, Data Analytics and Visualisation",
         "Conceptualized and improved features through research and data analysis.",
         "Analyzed user feedback and data insights to enhance existing features and resolve bugs.",
         "Created documentation on Jira/Confluence, developed rollout plans, and release checklists.",
@@ -19,7 +20,7 @@ const projects = [
       features: ["Product Data Dashboard for SP App", "AI Chatbot Proposal"],
       hideGitHubLink: true, // Hide GitHub link
       hideImages: true, // Show images for this project
-      hideRole: true, // Show images for this project
+      hideRole: false, // Show images for this project
     },
     {
       id: "project2",
@@ -32,7 +33,7 @@ const projects = [
       features: ["Create various machine learning projects, including image classification and sentiment analysis", "Upload their custom dataset or choose from existing ones in each project", "Label data with a user-friendly interface", "Prioritise more informative data" ,"Supports image classification (single and multi-label), sentiment analysis and object detection labelling", "Users can enhance accuracy and other performance metrics through iterative active learning"],
       hideGitHubLink: false, // Hide GitHub link
       hideImages: false, // Show images for this project
-      hideRole: true, // Show images for this project
+      hideRole: false, // Show images for this project
     //   https://devpost.com/software/labella
     },
     {
@@ -41,12 +42,12 @@ const projects = [
         description: "A full-stack solution to manage employee schedules and WFH requests efficiently",
         techStack: ["Vue.js", "TailwindCSS", "Flask", "SQLAlchemy"],
         githubLink: "https://github.com/sriyanope/IS212_G8T5",
-        images: ["image3.png"],
+        images: [""],
         role: ["Backend"],
         features: ["Employees can view their own schedule and team schedule", "Employees can apply for WFH requests", "Managers can approve/reject WFH requests", "Role based access for different types of employees", "Deployed on Netlify and Render", "CI/CD pipeline with Github Actions"],
         hideGitHubLink: false, // Hide GitHub link
         hideImages: true, // Show images for this project
-        hideRole: true, // Show images for this project
+        hideRole: false, // Show images for this project
       },
       {
         id: "project4",
@@ -61,7 +62,7 @@ const projects = [
           "Lucide React"
         ],
         githubLink: "https://github.com/crediblues/crediblues.github.io",
-        images: ["image3.png"],
+        images: [""],
         role: ["Full Stack"],
         features: [
           "Responsive design that works seamlessly across all devices",
@@ -73,6 +74,33 @@ const projects = [
         ],
         hideGitHubLink: false, // Hide GitHub link
         hideImages: true, // Show images for this project
+        hideRole: true, // Show images for this project
+      },
+      {
+        id: "project5",
+        title: "Geospatial Analytics Using R ",
+        description: "Coursework for Geospatial Analytics and Applications",
+        techStack: [
+          "R",
+          "tidyverse, sf",
+          "spdep, tmap, ggplot2",
+          "spatstat",
+          "dplyr, corrplot",
+          "olsrr, GWmodel",
+          "shiny, leaflet"
+        ],
+        githubLink: "https://is415-geospatial-with-wenxian.netlify.app/",
+        images: ["/geosp.png"],
+        role: ["Full Stack"],
+        features: [
+          "Data Import and Transformation: Aspatial / Geospatial Data",
+          "Data Analysis: EDA / Multivariate Analysis",
+          "Mapping and Visualization",
+          "Spatial Analytics: SPPA, ",
+          "Geographically weighted regression (GWR) "
+        ],
+        hideGitHubLink: false, // Hide GitHub link
+        hideImages: false, // Show images for this project
         hideRole: true, // Show images for this project
       }
   ];
