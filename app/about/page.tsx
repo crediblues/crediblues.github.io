@@ -128,7 +128,14 @@ export default function About() {
             ))}
           </div>
         </section>
-
+        {/* <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-[#132043] mb-6">Skills and Expertise</h2>
+          <motion.div layoutId="modal" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {skillCategories.map((category, index) => (
+              <SkillItem key={index} {...category} />
+            ))}
+          </motion.div>
+        </section> */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-[#132043] mb-4">Education</h2>
           <div className="text-[#132043]">

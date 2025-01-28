@@ -24,7 +24,7 @@ const projects = [
     },
     {
       id: "project2",
-      title: "Labella – TikTok TechJam 2024",
+      title: "Labella – TikTok TechJam 2024 Finalist",
       description: "A data labelling platform that incorporates active learning techniques to aid the user in prioritising the most informative samples to label for machine learning. Achieved Top 15 out of 270 teams (Finalist)",
       techStack: ["Next.js", "Flask", "Celery", "Redis", "Pytorch", "modAL", "scikit-learn"],
       githubLink: "https://github.com/oliviaow2022/techjam",
@@ -102,8 +102,33 @@ const projects = [
         hideGitHubLink: false, // Hide GitHub link
         hideImages: false, // Show images for this project
         hideRole: true, // Show images for this project
+      },
+      {
+        id: "project6",
+        title: "Carexplorer: Analysing spatial patterns and accessbility regarding Eldercare Facilities and CHAS Clinics in Singapore ",
+        description: "Singapore's rapidly aging population underscores the importance of equitable access to essential services for elderly residents. Eldercare facilities provide vital support such as daycare and respite care, while CHAS (Community Health Assist Scheme) clinics offer subsidized healthcare services. Optimizing the locations of these facilities relative to each other and to population clusters is crucial for effective care delivery. This application leverages geospatial analyses, including Spatial Point Pattern Analysis (SPPA) and Geographical Accessibility Modelling, to evaluate the spatial alignment of eldercare facilities and CHAS clinics. This application aims to identify underserved areas and support informed urban planning decisions.",
+        techStack: [
+          "shinycssloaders",
+          "shiny",
+          "spatstat",
+          "sf, dplyr, tidyverse",
+          "raster, tmap, leaflet",
+          "SpatialAcc",
+          "units"
+        ],
+        githubLink: "https://carexplorer.netlify.app/",
+        images: ["/gaa_poster.png"],
+        role: ["Full Stack"],
+        features: [
+          "Exploratory Spatial Data Visualization: Interactive mapping of eldercare facilities and CHAS clinics",
+          "Spatial Point Pattern Analysis: Univariate and bivariate K-functions, Monte Carlo Simulations",
+          "Geographical Accessibility Modelling: Hansen Accessibility Model, Spatial Accessibility Model",
+          "Dynamic Visualization: Interactive maps displaying accessibility scores and patterns"
+        ],
+        hideGitHubLink: false, // Hide GitHub link
+        hideImages: false, // Show images for this project
+        hideRole: true, // Show images for this project
       }
   ];
-  
   export default projects;
   

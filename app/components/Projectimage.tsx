@@ -3,19 +3,20 @@ import Image from 'next/image'
 interface ProjectImageProps {
   src: string
   alt: string
+  className?: string
 }
 
-export default function ProjectImage({ src, alt }: ProjectImageProps) {
+export default function ProjectImage({ src, alt, className }: ProjectImageProps) {
   return (
-    <div className="relative w-full h-64 mb-4">
-      <Image
-        src={src}
-        alt={alt}
-        layout="fill"
-        objectFit="cover"
-        className="rounded-lg"
-      />
-    </div>
-  )
+    <Image 
+      src={src} 
+      alt={alt} 
+      className={className} // Pass the className prop to the Image component
+      layout="responsive" 
+      width={100} 
+      height={100} 
+    />
+  );
 }
+
 

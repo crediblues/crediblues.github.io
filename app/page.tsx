@@ -3,6 +3,7 @@
 import Navbar from './components/Navbar';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from "next/image"
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -46,23 +47,38 @@ export default function Home() {
       <Navbar />
       <div className="overflow-hidden">
         {/* First Section */}
+        {/* <motion.div className='min-h-screen flex flex-col justify-center items-center bg-[#FDF0F0] text-center'>
+          <img src='/profilepic.jpg'></img>
+        </motion.div> */}
         <motion.div
           className="min-h-screen flex flex-col justify-center items-center bg-[#FDF0F0] text-center"
           initial="hidden"
           animate={scrollY < windowHeight ? 'visible' : 'hidden'}
           variants={variants}
           transition={{ duration: 0.6 }}>
+          <motion.div
+            className="mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="relative w-48 h-48 rounded-full overflow-hidden mx-auto">
+              <Image
+                src="/profilepic.jpg?height=200&width=200"
+                alt="Wen Xian's Profile Picture"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </motion.div>
+
           <motion.h1 
             className="text-5xl font-bold text-[#132043] mb-4 mt-0 flex"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
-            {/* {headingText.split('').map((char, index) => (
-              <motion.span key={index} variants={letterVariants}>
-                {char === ' ' ? '\u00A0' : char}
-              </motion.span>
-            ))} */}
             {headingText}
           </motion.h1>
           <motion.p 
