@@ -105,7 +105,7 @@ const projects = [
       },
       {
         id: "project6",
-        title: "Carexplorer: Analysing spatial patterns and accessbility regarding Eldercare Facilities and CHAS Clinics in Singapore ",
+        title: "Carexplorer: Analysing spatial patterns and accessibility regarding Eldercare Facilities and CHAS Clinics in Singapore ",
         description: "Singapore's rapidly aging population underscores the importance of equitable access to essential services for elderly residents. Eldercare facilities provide vital support such as daycare and respite care, while CHAS (Community Health Assist Scheme) clinics offer subsidized healthcare services. Optimizing the locations of these facilities relative to each other and to population clusters is crucial for effective care delivery. This application leverages geospatial analyses, including Spatial Point Pattern Analysis (SPPA) and Geographical Accessibility Modelling, to evaluate the spatial alignment of eldercare facilities and CHAS clinics. This application aims to identify underserved areas and support informed urban planning decisions.",
         techStack: [
           "shinycssloaders",

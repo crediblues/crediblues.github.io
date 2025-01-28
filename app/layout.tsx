@@ -21,6 +21,7 @@ const SpaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Wen - Portfolio",
   description: "Data Science Portfolio",
+  icons: "/animal.ico"
 };
 
 export default function RootLayout({
