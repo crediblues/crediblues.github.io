@@ -3,27 +3,6 @@
 const projects = [
     {
       id: "project1",
-      title: "Product Development Intern @ SP Group (SP Digital)",
-      description: "I was attached to the product team working on the SP App, which is a platform designed to help customers monitor their utilities usage, pay bills conveniently, and adopt sustainable practices. It is widely used by Singapore residents.",
-      techStack: ["SQL", "BigQuery", "Google Looker Studio", "JIRA", "Confluence", "Figma", "Canva"],
-      githubLink: "",
-      images: ["/spgroup.png"],
-      role: [
-        "Product Development, Product Management, Data Analytics and Visualisation",
-        "Conceptualized and improved features through research and data analysis.",
-        "Analyzed user feedback and data insights to enhance existing features and resolve bugs.",
-        "Created documentation on Jira/Confluence, developed rollout plans, and release checklists.",
-        "Designed high-fidelity prototypes using Figma for initiatives like a data dashboard and AI Chatbot.",
-        "Developed a data dashboard with BigQuery and Looker Studio to visualize key metrics.",
-        "Collaborated with Product and UX teams to integrate feedback into actionable insights."
-      ],
-      features: ["Product Data Dashboard for SP App", "AI Chatbot Proposal"],
-      hideGitHubLink: true, // Hide GitHub link
-      hideImages: true, // Show images for this project
-      hideRole: false, // Show images for this project
-    },
-    {
-      id: "project2",
       title: "Labella – TikTok TechJam 2024 Finalist",
       description: "A data labelling platform that incorporates active learning techniques to aid the user in prioritising the most informative samples to label for machine learning. Achieved Top 15 out of 270 teams (Finalist)",
       techStack: ["Next.js", "Flask", "Celery", "Redis", "Pytorch", "modAL", "scikit-learn"],
@@ -37,7 +16,7 @@ const projects = [
     //   https://devpost.com/software/labella
     },
     {
-        id: "project3",
+        id: "project2",
         title: "Work-From-Home (WFH) Tracking System",
         description: "A full-stack solution to manage employee schedules and WFH requests efficiently",
         techStack: ["Vue.js", "TailwindCSS", "Flask", "SQLAlchemy"],
@@ -50,7 +29,7 @@ const projects = [
         hideRole: false, // Show images for this project
       },
       {
-        id: "project4",
+        id: "project3",
         title: "Personal Portfolio Website",
         description: "This is the website that you are currently on. Built with Next.js and React. Features smooth animations, dynamic content loading, and an intuitive user interface. The website showcases my projects, skills, and professional journey.",
         techStack: [
@@ -77,7 +56,7 @@ const projects = [
         hideRole: true, // Show images for this project
       },
       {
-        id: "project5",
+        id: "project4",
         title: "Geospatial Analytics Using R ",
         description: "Coursework for Geospatial Analytics and Applications",
         techStack: [
@@ -104,7 +83,7 @@ const projects = [
         hideRole: true, // Show images for this project
       },
       {
-        id: "project6",
+        id: "project5",
         title: "Carexplorer: Analysing spatial patterns and accessibility regarding Eldercare Facilities and CHAS Clinics in Singapore ",
         description: "Singapore's rapidly aging population underscores the importance of equitable access to essential services for elderly residents. Eldercare facilities provide vital support such as daycare and respite care, while CHAS (Community Health Assist Scheme) clinics offer subsidized healthcare services. This application leverages geospatial analyses, including Spatial Point Pattern Analysis (SPPA) and Geographical Accessibility Modelling, to evaluate the spatial alignment of eldercare facilities and CHAS clinics. This application aims to identify underserved areas and support informed urban planning decisions.",
         techStack: [

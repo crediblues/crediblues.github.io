@@ -66,7 +66,12 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           {!project.hideImages && (
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               {project.images.map((img, index) => (
-                <ProjectImage key={index} src={img} alt={`${project.title} screenshot ${index + 1}`} />
+                <ProjectImage 
+                  key={index} 
+                  src={img} 
+                  alt={`${project.title} screenshot ${index + 1}`} 
+                  className="rounded-lg"
+                />
               ))}
             </motion.div>
           )}
