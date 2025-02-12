@@ -93,19 +93,17 @@ export default function About() {
           <h1 className="text-2xl font-semibold text-[#132043] mb-4">About Me</h1>
           <div className="space-y-4 text-[#132043]">
             <p>
-              Hello! I&apos;m Wen Xian, a third-year Information Systems student at Singapore Management University,
+              Hello! I&apos;m Wen Xian, a penultimate Information Systems student at Singapore Management University,
               specializing in data analytics and artificial intelligence.
             </p>
             <p>
               I thrive on using data to solve problems and create meaningful solutions that enhance people&apos;s lives.
               My experiences range from designing data dashboards and developing web applications to implementing
-              machine learning solutions. These opportunities have deepened my passion for leveraging technology to
-              drive strategic business decisions.
+              machine learning solutions.
             </p>
             <p>
               My analytical mindset and proficiency with data-driven tools have been shaped through academic projects and
-              professional experiences. Whether working on creating a data dashboard to visualize key metrics or
-              collaborating with teams to develop AI solutions, I approach challenges with curiosity and a
+              professional experiences. I approach challenges with curiosity and a
               problem-solving attitude.
             </p>
             <p>
@@ -115,7 +113,8 @@ export default function About() {
             </p>
             <p>
               In my free time, I enjoy exploring new data science tools and techniques, honing my skills through personal
-              projects, and taking on challenges that help me to expand my knowledge and skills.
+              projects, and taking on challenges that help me to expand my knowledge and skills. Work and academics aside, I 
+              like to hike in Singapore&apos;s nature parks and explore new places.
             </p>
           </div>
         </section>
