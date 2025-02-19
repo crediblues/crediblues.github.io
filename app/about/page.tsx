@@ -32,9 +32,9 @@ const skillCategories: SkillCategory[] = [
     skills: "Flask, Next.js, Vue.js, Bootstrap, TailwindCSS",
   },
   {
-    name: "Python Libraries",
+    name: "Python Libraries (AL/ML)",
     icon: <FileCode size={32} />,
-    skills: "Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, Pytorch",
+    skills: "Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, Pytorch, nltk, SciPy, Spacy",
   },
   {
     name: "SQL",
