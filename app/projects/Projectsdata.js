@@ -125,7 +125,7 @@ const projects = [
         role: ["Full Stack"],
         features: [
           "Machine Learning & Prediction: Built an ML pipeline to predict hotel no-shows and a regression model for house price prediction.",
-          "Exploratory Data Analysis (EDA): Performed data cleaning, trend analysis, and visualization for aviation incidents, Titanic passengers, and rental housing data.",
+          "Exploratory Data Analysis (EDA): Performed data cleaning, trend analysis, and visualization for aviation incidents, Titanic passengers, and rental housing data. ",
           "Geospatial Analytics: Mapped and analyzed Singapore's rental trends using geospatial visualization"
         ],
         hideGitHubLink: false, // Hide GitHub link
