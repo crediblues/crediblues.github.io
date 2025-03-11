@@ -107,6 +107,30 @@ const projects = [
         hideGitHubLink: false, // Hide GitHub link
         hideImages: false, // Show images for this project
         hideRole: true, // Show images for this project
+      },
+      {
+        id: "project6",
+        title: "Data Analytics Portfolio ",
+        description: "Projects include ML for hotel no-show prediction, geospatial analysis of Singapore rental trends, and aviation incident insights using Python, SQL & Tableau. Built end-to-end pipelines, performed EDA, and developed predictive models.",
+        techStack: [
+          "Python, SQL",
+          "Pandas, NumPy, Scikit-learn, Scipy, Matplotlib, Seaborn, Folium, Geopandas",
+          "Scikit-learn",
+          "SQLite",
+          "Tableau",
+          "Argparse, Pickle"
+        ],
+        githubLink: "https://github.com/crediblues/DataAnalytics",
+        images: ["/gaa_poster.png"],
+        role: ["Full Stack"],
+        features: [
+          "Machine Learning & Prediction: Built an ML pipeline to predict hotel no-shows and a regression model for house price prediction.",
+          "Exploratory Data Analysis (EDA): Performed data cleaning, trend analysis, and visualization for aviation incidents, Titanic passengers, and rental housing data.",
+          "Geospatial Analytics: Mapped and analyzed Singapore's rental trends using geospatial visualization"
+        ],
+        hideGitHubLink: false, // Hide GitHub link
+        hideImages: true, // Show images for this project
+        hideRole: true, // Show images for this project
       }
   ];
   export default projects;
